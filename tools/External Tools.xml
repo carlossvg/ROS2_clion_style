@@ -36,15 +36,15 @@
   </tool>
   <tool name="Test Current" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
-      <option name="COMMAND" value="_apex_clion_test" />
-      <option name="PARAMETERS" value="$ProjectName$" />
+      <option name="COMMAND" value="colcon" />
+      <option name="PARAMETERS" value="test --packages-select $ProjectName$ --event-handlers console_cohesion+" />
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.." />
     </exec>
   </tool>
   <tool name="Test Current (Retest until fail)" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
-      <option name="COMMAND" value="_apex_clion_test" />
-      <option name="PARAMETERS" value="$ProjectName$ 10" />
+      <option name="COMMAND" value="colcon" />
+      <option name="PARAMETERS" value="test --packages-select $ProjectName$ --event-handlers console_cohesion+ --retest-until-fail 10" />
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.." />
     </exec>
   </tool>
@@ -64,12 +64,12 @@
   </tool>
   <tool name="Test All" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
-      <option name="COMMAND" value="_apex_clion_test" />
-      <option name="PARAMETERS" />
+      <option name="COMMAND" value="colcon " />
+      <option name="PARAMETERS" value="test --event-handlers console_cohesion+" />
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.." />
     </exec>
   </tool>
-  <tool name="PCLint" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="true" synchronizeAfterRun="true">
+  <tool name="PCLint" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="true" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="true" synchronizeAfterRun="true">
     <exec>
       <option name="COMMAND" value="ament_pclint" />
       <option name="PARAMETERS" value="--package-root $CMakeCurrentBuildDir$/.. --include-directories /opt/rti_connext_micro/include -- $FilePath$" />
@@ -81,7 +81,7 @@
       <option name="REGEXP" value=".*$FILE_PATH$:$LINE$\].*" />
     </filter>
   </tool>
-  <tool name="PCLint (entire package)" description="Run PCLint on the currently loaded package" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+  <tool name="PCLint (entire package)" description="Run PCLint on the currently loaded package" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="true" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
       <option name="COMMAND" value="ctest" />
       <option name="PARAMETERS" value="-V -L pclint" />
@@ -100,7 +100,7 @@
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.." />
     </exec>
   </tool>
-  <tool name="Axivion" description="Run Axivion on currently loaded package" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+  <tool name="Axivion" description="Run Axivion on currently loaded package" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="true" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
       <option name="COMMAND" value="ctest" />
       <option name="PARAMETERS" value="-V -L axivion" />
