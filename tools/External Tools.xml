@@ -34,7 +34,7 @@
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.." />
     </exec>
   </tool>
-  <tool name="Test Current" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+  <tool name="Test Current" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="true" showConsoleOnStdErr="true" synchronizeAfterRun="true">
     <exec>
       <option name="COMMAND" value="colcon" />
       <option name="PARAMETERS" value="test --packages-select $ProjectName$ --event-handlers console_cohesion+" />
@@ -65,7 +65,7 @@
   <tool name="Test All" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
       <option name="COMMAND" value="colcon" />
-      <option name="PARAMETERS" value="test --event-handlers console_cohesion+"/>
+      <option name="PARAMETERS" value="test --event-handlers console_cohesion+" />
       <option name="WORKING_DIRECTORY" value="$ProjectFileDir$/.." />
     </exec>
   </tool>
