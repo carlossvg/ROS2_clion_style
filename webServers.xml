@@ -2,7 +2,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="8d9847d6-09a6-4203-9d3e-d7ae03a339ba" name="Remote Host (8d9847d6-09a6-4203-9d3e-d7ae03a339ba)" url="http:///">
-        <fileTransfer accessType="SFTP" host="192.168.0.27" port="22" sshConfigId="5ce3ff00-02f7-4a58-9893-21d645ee0bad" sshConfig="ubuntu@192.168.0.27:22 password" />
+        <fileTransfer rootFolder="/home/ubuntu" accessType="SFTP" host="192.168.0.27" port="22" sshConfigId="5ce3ff00-02f7-4a58-9893-21d645ee0bad" sshConfig="ubuntu@192.168.0.27:22 password" />
       </webServer>
     </option>
   </component>
